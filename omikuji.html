@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>おみくじゲーム</title>
+    <style>
+        input {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="button" onclick="pushButton()" value="おみくじを引く">
+
+    <script>
+        function pushButton() {
+            var random = Math.floor(Math.random() * 6);
+            switch (random) {
+                case 0:
+                    alert("大吉");
+                    break;
+                case 1:
+                case 2:
+                    alert("中吉");
+                    break;
+                case 3:
+                case 4:
+                    alert("小吉");
+                    break;
+                default:
+                    alert("凶");
+            }
+        }
+    </script>
+
+</body>
+</html>
